@@ -6,8 +6,8 @@ import TelaProblemas from './views/TelaProblemas'
 export default props => {
     return(
     <SafeAreaView style={{flex:1}}>
-        {/*<TelaLogin />*/}
-        <TelaProblemas />
+        <TelaLogin />
+        {/* <TelaProblemas /> */}
     </SafeAreaView>
     )
 }

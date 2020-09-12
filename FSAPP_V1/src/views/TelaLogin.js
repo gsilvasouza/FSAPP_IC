@@ -4,10 +4,11 @@ import {Text,
     TextInput, 
     View, 
     KeyboardAvoidingView,
-    Image} from 'react-native'
+    Image,
+    Button} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default props => {
+export default function Home({ navigation }) {
      return(
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.viewlogo}>
@@ -29,13 +30,21 @@ export default props => {
                 placeholder='Senha'
                 autoCorrect={false}
                 onChangeText={() => {}}
+
                 />
+
+                {/* <Button 
+                    title= "Entrar"
+                    onPress={() => navigation.navigate("TelaProblemas")}
+                    color="#FFF"
+                    
+                /> */}
 
                 <TouchableOpacity style={styles.btnSubmit}>
                     <Text style={styles.submitText}> Entrar </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.btnProblems}>
+                <TouchableOpacity style={styles.btnProblems} onPress={() => navigation.navigate("TelaProblemas")}>
                     <Text style={styles.problemsText}>PROBLEMAS PARA LOGAR?</Text>
                 </TouchableOpacity>
             </View>
@@ -72,7 +81,7 @@ const styles = StyleSheet.create({
         height: 52
     },
     btnSubmit: {
-        backgroundColor: '#FFF',
+        backgroundColor: 'white',
         height: 45,
         alignItems: "center",
         justifyContent: "center",
