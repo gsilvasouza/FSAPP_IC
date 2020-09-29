@@ -13,33 +13,37 @@ export default function Home({ navigation }) {
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.viewlogo}>
                 <Image 
-                source={require('./FSAPP.png')}
+                source={require('../images/FSAPP.png')}
                 />
             </View>
 
             <View style={styles.viewprincipal}>
-                <TextInput 
-                style={styles.input}
-                placeholder='Email'
-                autoCorrect={false}
-                onChangeText={() => {}}
-                />
+                <View style={styles.input}>
+                    <Image 
+                        source={require('../images/user.png')}
+                        style={{height: 27, width: 27}}
+                    />
+                    <TextInput 
+                        style= {styles.inputTexto}
+                        placeholder='RA'
+                        autoCorrect={false}
+                        onChangeText={() => {}}
+                    />  
+                </View>
 
-                <TextInput 
-                style={styles.input}
-                placeholder='Senha'
-                autoCorrect={false}
-                onChangeText={() => {}}
-
-                />
-
-                {/* <Button 
-                    title= "Entrar"
-                    onPress={() => navigation.navigate("TelaProblemas")}
-                    color="#FFF"
-                    
-                /> */}
-
+                <View style={styles.input}>
+                    <Image 
+                        source={require('../images/senha.png')}
+                        style={{height: 27, width: 27}}
+                    />
+                    <TextInput 
+                        style= {styles.inputTexto}
+                        placeholder='Senha'
+                        autoCorrect={false}
+                        onChangeText={() => {}}
+                    />  
+                </View>
+                
                 <TouchableOpacity style={styles.btnSubmit}>
                     <Text style={styles.submitText}> Entrar </Text>
                 </TouchableOpacity>
@@ -78,7 +82,19 @@ const styles = StyleSheet.create({
         fontSize: 17,
         borderRadius: 44.697,
         padding: 10,
-        height: 52
+        height: 52,
+        flexDirection: 'row',
+    },
+    inputTexto:{
+        backgroundColor: '#FFF',
+        width: 213,
+        marginBottom: 23,
+        marginLeft: 5,
+        color: '#222',
+        fontSize: 17,
+        borderRadius: 44.697,
+        margin: -10,
+        height: 52,
     },
     btnSubmit: {
         backgroundColor: 'white',
