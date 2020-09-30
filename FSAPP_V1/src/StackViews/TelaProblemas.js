@@ -1,9 +1,6 @@
 import React from 'react';
-import {Text, 
-    StyleSheet, 
-    TextInput, 
-    View, 
-    KeyboardAvoidingView} from 'react-native'
+import {Text, StyleSheet, TextInput, View, 
+    KeyboardAvoidingView,Image} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default props => {
@@ -11,6 +8,17 @@ export default props => {
         <KeyboardAvoidingView style={styles.container}>
 
             <View style={styles.viewprincipal}>
+                <View  style={styles.header}>
+                    <TouchableOpacity style={{left: -50}}
+                        onPress={() => props.navigation.goBack()}
+                        >
+                        <Image 
+                            source={require('../images/back.png')}
+                            resizeMode='contain'
+                        />
+                    </TouchableOpacity>
+                    <Image source={require('../images/FSAPP.png')} style={{left: -20}}/>
+                </View>
                 <TextInput 
                 style={styles.input}
                 placeholder='Nome Completo'
@@ -52,7 +60,8 @@ const styles = StyleSheet.create ({
        alignItems: "center",
        justifyContent: "center",
        width: 253,
-       paddingBottom: 163
+       paddingBottom: 163,
+       paddingTop: 20
     }, 
     input:{
         backgroundColor: '#FFF',
@@ -87,4 +96,10 @@ const styles = StyleSheet.create ({
         fontSize: 18,
         lineHeight: 22
     },
+    header: {
+        alignItems: 'center',
+        flexDirection: 'row', 
+        marginTop: '-25%', 
+        paddingBottom: 50
+    }
 })

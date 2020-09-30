@@ -44,7 +44,7 @@ export default function Home({ navigation }) {
                     />  
                 </View>
                 
-                <TouchableOpacity style={styles.btnSubmit}>
+                <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate("HomeApp")}>
                     <Text style={styles.submitText}> Entrar </Text>
                 </TouchableOpacity>
 

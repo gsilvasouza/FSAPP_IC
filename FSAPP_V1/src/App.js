@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native'
-import TelaLogin from './views/TelaLogin'
-import TelaProblemas from './views/TelaProblemas'
+import TelaLogin from './StackViews/TelaLogin'
+import TelaProblemas from './StackViews/TelaProblemas'
 
 export default props => {
     return(
