@@ -8,7 +8,7 @@ import {Text,
     Button} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function Home({ navigation }) {
+export default function Login({ navigation }) {
      return(
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.viewlogo}>
@@ -44,11 +44,11 @@ export default function Home({ navigation }) {
                     />  
                 </View>
                 
-                <TouchableOpacity style={styles.btnSubmit} onPress={() => navigation.navigate("HomeApp")}>
+                <TouchableOpacity style={styles.btnSubmit} onPress={() =>navigation.navigate('HomeApp')}>
                     <Text style={styles.submitText}> Entrar </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.btnProblems} onPress={() => navigation.navigate("TelaProblemas")}>
+                <TouchableOpacity style={styles.btnProblems} onPress={() =>navigation.navigate('TelaProblemas')}>
                     <Text style={styles.problemsText}>PROBLEMAS PARA LOGAR?</Text>
                 </TouchableOpacity>
             </View>
