@@ -3,14 +3,14 @@ import {Text, StyleSheet, TextInput, View,
     KeyboardAvoidingView,Image} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default props => {
+export default function problems({ navigation }) {
      return(
         <KeyboardAvoidingView style={styles.container}>
 
             <View style={styles.viewprincipal}>
                 <View  style={styles.header}>
                     <TouchableOpacity style={{left: -50}}
-                        onPress={() => props.navigation.goBack()}
+                        onPress={() => navigation.goBack()}
                         >
                         <Image 
                             source={require('../images/back.png')}
