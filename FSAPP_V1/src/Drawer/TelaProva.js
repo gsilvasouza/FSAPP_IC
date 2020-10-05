@@ -1,11 +1,10 @@
 import React, {Component, useRef} from 'react';
-import {Text, StyleSheet, View,Image} from 'react-native'
+import {Text, StyleSheet, View,Image, ScrollView} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Modalize} from 'react-native-modalize' 
 import {QuadroHorario} from '../components/QuadroHorario'
-import {QuadroDivulgacao} from '../components/QuadroDivulgacao'
 
-export default function Home({ navigation }){
+export default function Aulas({ navigation }){
     const modalizeRef= useRef(null);
 
     function onOpen(){
@@ -38,21 +37,17 @@ export default function Home({ navigation }){
                     </TouchableOpacity>
                     </View>
             </View>
-            <View style={{width:138, height: 138, marginTop: 20, alignSelf: "center"}}>
-                <Image style={{width:138, height: 138, borderRadius: 20, borderWidth: 2}} 
-                    source={require('../images/fotoPerfil.jpg')}
-                />
-            </View>
-            <View style={{marginTop: 29, width: '100%', height: 80, alignSelf: "center"}}>
-                <Text style={{ color: 'white', marginTop:10 }}> Nome: Gabriel Silva de Souza </Text>
-                <Text style={{color: 'white'}}> Curso: Analise e Desenvolvimento de Sistemas </Text>  
-                <Text style={{alignSelf: "flex-end", marginTop: -40, marginRight: 20, color: 'white'}}>RM: 12345 </Text>
-                <Text style={{alignSelf: "flex-end", color: 'white'}}>Turma: 1TDSZ</Text>
-            </View>
-
-            <QuadroHorario exibir={1}/>
-            <QuadroDivulgacao />
-
+            
+            <ScrollView>
+                <View style={{alignItems: 'center'}}>
+                    <QuadroHorario exibir={1}/>
+                    <QuadroHorario exibir={2}/>
+                    <QuadroHorario exibir={3}/>
+                    <QuadroHorario exibir={4}/>
+                    <QuadroHorario exibir={5}/>
+                    
+                </View>
+            </ScrollView>
             <Modalize
             ref={modalizeRef}
             snapPoint={180}
@@ -69,18 +64,17 @@ export default function Home({ navigation }){
                     <Text>Notificacoes</Text>
                 </View>
             </Modalize>
+            
         </View>
-    )
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flexDirection: "row",
-        height: 53,
-        backgroundColor: "#09519B",
-    },
-    imagemPerfil: {
-        width:138, height: 138, borderRadius: 20, borderWidth: 2, marginTop: 20
-    }
-
-})
+    )}
+    const styles = StyleSheet.create({
+        container: {
+            flexDirection: "row",
+            height: 53,
+            backgroundColor: "#09519B",
+        },
+        imagemPerfil: {
+            width:138, height: 138, borderRadius: 20, borderWidth: 2, marginTop: 20
+        }
+    
+    })

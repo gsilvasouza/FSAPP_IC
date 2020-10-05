@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {Text, StyleSheet, View,Image, ScrollView, Dimensions} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-
-
 const images = [
     'https://images.pexels.com/photos/4843441/pexels-photo-4843441.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     'https://images.pexels.com/photos/3585648/pexels-photo-3585648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
@@ -55,9 +53,9 @@ export class QuadroDivulgacao extends Component{
     }
 }
 const stylesCarrosel = StyleSheet.create({
-    container: {width:326, height: 81, borderRadius: 20,  marginTop: 40, alignSelf: "center", alignItems: "center"},
-    scrollView: {width:326, height: 81, borderRadius: 20},
-    image: {width:326, height: 81, resizeMode: "cover", borderRadius: 20,borderWidth: 2,},
+    container: {width:326, height: 101, borderRadius: 20,  marginTop: 40, alignSelf: "center", alignItems: "center"},
+    scrollView: {width:326, height: 101, borderRadius: 20},
+    image: {width:326, height: 101, resizeMode: "cover", borderRadius: 20,borderWidth: 2,},
     pagination: {flexDirection: "row", position: "absolute", bottom: 0, alignSelf: "center"},
     paginationText: {fontSize: (326/30), color: '#888', margin: 3},
     paginationActiveText: {fontSize: (326/30), color: '#fff', margin: 3}
