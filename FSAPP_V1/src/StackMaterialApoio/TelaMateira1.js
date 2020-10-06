@@ -9,7 +9,7 @@ export class TelaMateria1 extends Component {
   return(
       <View style={{flex:1, backgroundColor: "#09519B"}}>
           <View style={styles.container}>
-              <Text>AAAAAAAAA </Text>
+              <Text>AAAAAAAAAaaa </Text>
           </View>
       </View>
   )}}
