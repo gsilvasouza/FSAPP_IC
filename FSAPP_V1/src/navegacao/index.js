@@ -15,15 +15,15 @@ import TelaProvas from '../Drawer/TelaProva'
 import TelaNotas from '../Drawer/TelaNotas'
 
 import TelaMaterialApoio from '../StackMaterialApoio/TelaMaterialApoio'
-import {TelaMateria1} from '../StackMaterialApoio/TelaMateira1'
+import TelaMateria1 from '../StackMaterialApoio/TelaMateira1'
 
-const MaterialDeApoioStack = createStackNavigator();
+// const MaterialDeApoioStack = createStackNavigator();
 
-function StackMaterialDeApoio(){
-    <MaterialDeApoioStack.Navigator  initialRouteName="TelaMateria1">
-        <MaterialDeApoioStack.Screen name='TelaMateria1' component={TelaMateria1}/>
-    </MaterialDeApoioStack.Navigator>
-}
+// function StackMaterialDeApoio(){
+//     <MaterialDeApoioStack.Navigator  initialRouteName="TelaMateria1">
+//         <MaterialDeApoioStack.Screen name='TelaMateria1' component={TelaMateria1}/>
+//     </MaterialDeApoioStack.Navigator>
+// }
 
 const Drawer = createDrawerNavigator();
 
@@ -35,7 +35,7 @@ function DrawerNavigation({navigation}){
             <Drawer.Screen name="Provas" component={TelaProvas} />
             <Drawer.Screen name="Notas" component={TelaNotas} />
             <Drawer.Screen name="MaterialApoio" component={TelaMaterialApoio} />
-            <Drawer.Screen name="MaterialApoioStack" component={StackMaterialDeApoio} />
+            <Drawer.Screen name="TelaMateria1" component={TelaMateria1} />
         </Drawer.Navigator>
     )
 }

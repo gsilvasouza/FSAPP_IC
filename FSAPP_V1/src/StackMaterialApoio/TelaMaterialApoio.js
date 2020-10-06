@@ -11,8 +11,8 @@ export default function TelaMaterialApoio({ navigation }) {
       modalizeRef.current?.open();
   };
   return(
-      <View style={{flex:1, backgroundColor: "#09519B"}}>
-          <View style={styles.container}>
+        <View style={{flex:1, backgroundColor: "#09519B"}}>
+            <View style={styles.container}>
               <View style={{flex:0.5, justifyContent: "center"}}>
                   <TouchableOpacity 
                       onPress = {() => navigation.openDrawer()}
@@ -21,9 +21,9 @@ export default function TelaMaterialApoio({ navigation }) {
                       source={require('../images/MENU2.png')}
                       resizeMode='contain'/>
                   </TouchableOpacity>
-              </View>
+                </View>
                   <View style={{flex:2, justifyContent: "center"}}>           
-                      <TouchableOpacity>
+                      <TouchableOpacity onPress= {() => navigation.navigate('Home')}>
                           <Image style={{height: 35, width: 263, marginTop: 5}}
                               source={require('../images/FSAPP.png')}
                               resizeMode='contain'/>
@@ -35,35 +35,60 @@ export default function TelaMaterialApoio({ navigation }) {
                               source={require('../images/notificacao3.png')}
                               resizeMode='contain'/>
                   </TouchableOpacity>
-                  </View>
-          </View>
+                </View>
+            </View>
           
-          <ScrollView>
-          <View style={{flex:0.5, justifyContent: "center"}}>
-                  <TouchableOpacity 
-                      onPress = {() => {() => this.props.navigation.navigate('TelaMateria1')}}
+            <ScrollView>
+                <View style={{flex:0.5, justifyContent: "center"}}>
+                    <TouchableOpacity 
+                      onPress= {() => navigation.navigate('TelaMateria1')}
                       >
-                      <Text style={{alignSelf: "center", fontSize: 30}}>CLIQUE AQUI PORRa</Text>
-                  </TouchableOpacity>
-              </View>
-          </ScrollView>
-          <Modalize
-          ref={modalizeRef}
-          snapPoint={180}
-          >
-              <View
-              style={{
-                  flex: 1,
-                  height: 180,
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-              }}
-              >
+                        <View style={{flex:0.5, justifyContent: "center", marginTop: 20}}>
+                            <View style={{width: 330, height: 50, alignSelf: "center", backgroundColor: 'white', borderRadius: 20, borderWidth: 2}}> 
+                                    <Text style={{left: 30, fontSize: 22, fontStyle: "normal"}}>Java</Text>
+                                    <Text style={{left: 20, fontSize: 12}}>Professor: André Fernandes</Text>                       
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                      onPress= {() => navigation.navigate('TelaMateria1')}
+                      >
+                        <View style={{flex:0.5, justifyContent: "center", marginTop: 20}}>
+                            <View style={{width: 330, height: 50, alignSelf: "center", backgroundColor: 'white', borderRadius: 20, borderWidth: 2}}> 
+                                    <Text style={{left: 30, fontSize: 22, fontStyle: "normal"}}>ChatBot</Text>
+                                    <Text style={{left: 20, fontSize: 12}}>Professor: Thaison Oliveira</Text>                       
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                      onPress= {() => navigation.navigate('TelaMateria1')}
+                      >
+                        <View style={{flex:0.5, justifyContent: "center", marginTop: 20}}>
+                            <View style={{width: 330, height: 50, alignSelf: "center", backgroundColor: 'white', borderRadius: 20, borderWidth: 2}}> 
+                                    <Text style={{left: 30, fontSize: 22, fontStyle: "normal"}}>Python</Text>
+                                    <Text style={{left: 20, fontSize: 12}}>Professor: Fernando Magalhães</Text>                       
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
+            <Modalize
+                ref={modalizeRef}
+                snapPoint={180}
+            >
+                <View
+                    style={{
+                        flex: 1,
+                        height: 180,
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}
+                >
                   <Text>Notificacoes</Text>
-              </View>
-          </Modalize>
-      </View>
+                </View>
+            </Modalize>
+        </View>
   )}
   const styles = StyleSheet.create({
       container: {

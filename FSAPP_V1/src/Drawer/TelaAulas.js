@@ -23,7 +23,7 @@ export default function Aulas({ navigation }){
                     </TouchableOpacity>
                 </View>
                     <View style={{flex:2, justifyContent: "center"}}>           
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress= {() => navigation.navigate('Home')}>
                             <Image style={{height: 35, width: 263, marginTop: 5}}
                                 source={require('../images/FSAPP.png')}
                                 resizeMode='contain'/>

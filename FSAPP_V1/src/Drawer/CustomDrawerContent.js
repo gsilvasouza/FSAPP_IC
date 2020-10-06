@@ -11,25 +11,25 @@ export class CustomDrawerContent extends Component {
               </View> */}
               <ScrollView style={{marginLeft: 5}}>
                 <TouchableOpacity
-                    style={{marginTop: 20, flexDirection: "row"}}
+                    style={{marginTop: 0, flexDirection: "row"}}
                     onPress= {() => this.props.navigation.navigate('Home')}
                     >   
-                        <Image style={{margin: 10,height: 30, width: 30}}
+                        <Image style={{margin: 15,height: 30, width: 30}}
                         source={require('../images/home.png')}
                         resizeMode='contain'/>
                         <Text style={styles.items}>Home</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={{marginTop: 20, flexDirection: "row"}}
+                style={{marginTop: 0, flexDirection: "row"}}
                 onPress= {() => this.props.navigation.navigate('Aulas')}
                 >
-                    <Image style={{margin: 10,height: 30, width: 30}}
+                    <Image style={{margin: 15,height: 30, width: 30}}
                     source={require('../images/aulas.png')}
                     resizeMode='contain'/>
                     <Text style={styles.items}>Aulas</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={{marginTop: 20, flexDirection: "row"}}
+                style={{marginTop: 0, flexDirection: "row"}}
                 onPress= {() => this.props.navigation.navigate('Provas')}
                 >
                     <Image style={{margin: 15,height: 30, width: 30}}
@@ -38,7 +38,7 @@ export class CustomDrawerContent extends Component {
                     <Text style={styles.items}>Provas</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={{marginTop: 20, flexDirection: "row"}}
+                style={{marginTop:0, flexDirection: "row"}}
                 onPress= {() => this.props.navigation.navigate('Notas')}
                 >
                     <Image style={{margin: 15,height: 30, width: 30}}
@@ -47,16 +47,16 @@ export class CustomDrawerContent extends Component {
                     <Text style={styles.items}>Notas e Faltas</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={{marginTop: 20, flexDirection: "row"}}
+                style={{marginTop: 0, flexDirection: "row"}}
                 onPress= {() => this.props.navigation.navigate('MaterialApoio')}
                 >
                     <Image style={{margin: 15,height: 30, width: 30}}
-                    source={require('../images/notasFaltas.png')}
+                    source={require('../images/materialApoio.png')}
                     resizeMode='contain'/>
                     <Text style={styles.items}>Material Apoio</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={{marginTop: '160%', flexDirection: "row"}}
+                style={{marginTop: '130%', flexDirection: "row"}}
                 onPress= {() => this.props.navigation.navigate('TelaLogin')}
                 >
                     <Image style={{margin: 15,height: 30, width: 30}}

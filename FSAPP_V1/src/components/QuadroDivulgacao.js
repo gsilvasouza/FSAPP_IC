@@ -3,11 +3,11 @@ import {Text, StyleSheet, View,Image, ScrollView, Dimensions} from 'react-native
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const images = [
-    'https://images.pexels.com/photos/4843441/pexels-photo-4843441.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    'https://images.pexels.com/photos/3585648/pexels-photo-3585648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1967539/pexels-photo-1967539.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/2600348/pexels-photo-2600348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/879814/pexels-photo-879814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiHHtzrE_-hqVm2LVoC03DnSHoc434bprhTQ&usqp=CAU',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnGgvApew7viYEIRWjcMCS6olPqfISY7BY9A&usqp=CAU',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRefluxKMPiTbrGnrjJeVOvZz3H1D0jLuS9RQ&usqp=CAU',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSIhRtcDstz9otnti6phls35rxqGykokKmSyQ&usqp=CAU',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvfd5QRnM6SHc34LW_L2xL1mUbSxNaXA41Q&usqp=CAU'
 ]
 
 export class QuadroDivulgacao extends Component{
