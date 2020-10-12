@@ -13,17 +13,12 @@ import Home from '../Drawer/Home'
 import TelaAulas from '../Drawer/TelaAulas'
 import TelaProvas from '../Drawer/TelaProva'
 import TelaNotas from '../Drawer/TelaNotas'
-
+import TelaNotas2 from '../Drawer/TelaNotas2'
+import TelaNotasFinal from '../Drawer/TelaNotasFinal'
+import TelaCarteinhaEstudantil from '../Drawer/TelaCarteirinhaEstudantil'
 import TelaMaterialApoio from '../StackMaterialApoio/TelaMaterialApoio'
 import TelaMateria1 from '../StackMaterialApoio/TelaMateira1'
-
-// const MaterialDeApoioStack = createStackNavigator();
-
-// function StackMaterialDeApoio(){
-//     <MaterialDeApoioStack.Navigator  initialRouteName="TelaMateria1">
-//         <MaterialDeApoioStack.Screen name='TelaMateria1' component={TelaMateria1}/>
-//     </MaterialDeApoioStack.Navigator>
-// }
+import TelaFinanceiro from '../Drawer/TelaFInanceiro'
 
 const Drawer = createDrawerNavigator();
 
@@ -33,9 +28,14 @@ function DrawerNavigation({navigation}){
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="Aulas" component={TelaAulas} />
             <Drawer.Screen name="Provas" component={TelaProvas} />
-            <Drawer.Screen name="Notas" component={TelaNotas} />
+            <Drawer.Screen name="TelaNotas" component={TelaNotas} />
+            <Drawer.Screen name='TelaNotas2' component={TelaNotas2} />
+            <Drawer.Screen name='TelaNotasFinal' component={TelaNotasFinal} />
             <Drawer.Screen name="MaterialApoio" component={TelaMaterialApoio} />
             <Drawer.Screen name="TelaMateria1" component={TelaMateria1} />
+            <Drawer.Screen name="TelaCarteinhaEstudantil" component={TelaCarteinhaEstudantil} />
+            <Drawer.Screen name="TelaFinanceiro" component={TelaFinanceiro} />
+
         </Drawer.Navigator>
     )
 }

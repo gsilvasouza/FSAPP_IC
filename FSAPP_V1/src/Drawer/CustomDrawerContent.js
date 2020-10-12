@@ -39,7 +39,7 @@ export class CustomDrawerContent extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity
                 style={{marginTop:0, flexDirection: "row"}}
-                onPress= {() => this.props.navigation.navigate('Notas')}
+                onPress= {() => this.props.navigation.navigate('TelaNotas')}
                 >
                     <Image style={{margin: 15,height: 30, width: 30}}
                     source={require('../images/notasFaltas.png')}
@@ -56,7 +56,25 @@ export class CustomDrawerContent extends Component {
                     <Text style={styles.items}>Material Apoio</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={{marginTop: '130%', flexDirection: "row"}}
+                style={{marginTop: 0, flexDirection: "row"}}
+                onPress= {() => this.props.navigation.navigate('TelaCarteinhaEstudantil')}
+                >
+                    <Image style={{margin: 15,height: 30, width: 30}}
+                    source={require('../images/carteirinhaEstudantil.png')}
+                    resizeMode='contain'/>
+                    <Text style={styles.items}>Carteirinha Estudantil</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                style={{marginTop: 0, flexDirection: "row"}}
+                onPress= {() => this.props.navigation.navigate('TelaFinanceiro')}
+                >
+                    <Image style={{margin: 15,height: 30, width: 30}}
+                    source={require('../images/financeiro.png')}
+                    resizeMode='contain'/>
+                    <Text style={styles.items}>Financeiro</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                style={{marginTop: '90%', flexDirection: "row"}}
                 onPress= {() => this.props.navigation.navigate('TelaLogin')}
                 >
                     <Image style={{margin: 15,height: 30, width: 30}}

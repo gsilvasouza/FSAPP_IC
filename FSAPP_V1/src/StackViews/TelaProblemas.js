@@ -11,9 +11,9 @@ export default function problems({ navigation }) {
                 <View  style={styles.header}>
                     <TouchableOpacity 
                         onPress={() => navigation.goBack()}
+                        style={{left: -50}}
                         >
                         <Image 
-                            style={{left: -50}}
                             source={require('../images/back.png')}
                             resizeMode='contain'
                         />

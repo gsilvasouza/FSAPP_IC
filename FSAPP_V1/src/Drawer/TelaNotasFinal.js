@@ -2,10 +2,9 @@ import React, {Component, useRef} from 'react';
 import {Text, StyleSheet, View,Image, ScrollView} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Modalize} from 'react-native-modalize' 
-import { Row } from 'react-native-table-component';
 import Tabela from '../components/Tabela' 
 
-export default function TelaNotas({ navigation }) {
+export default function TelaNotasFinal({ navigation }) {
   const modalizeRef= useRef(null);
 
   function onOpen(){
@@ -40,15 +39,13 @@ export default function TelaNotas({ navigation }) {
           </View>
           
           <ScrollView>
-              <View>
-                    <Text onPress={() => navigation.navigate('TelaNotas')} 
-                    style={{alignSelf: "center", color: 'white', fontSize: 16, marginTop: 5}}>1° semestre</Text>
+          <Text onPress={() => navigation.navigate('TelaNotas2')} 
+                    style={{alignSelf: "flex-start", color: 'white', fontSize: 16, marginTop: 5}}>2° semestre</Text>
                 
-                    <Text onPress={() => navigation.navigate('TelaNotas2')} 
-                    style={{alignSelf: "flex-end", marginTop:-21, color: 'white', fontSize: 16}}>2° semestre</Text>                
-              </View>
+                    <Text onPress={() => navigation.navigate('TelaNotasFinal')} 
+                    style={{alignSelf: "center", marginTop:-21, color: 'white', fontSize: 16}}>Media Final</Text>
               <View>
-                  <Tabela exibirTabela={1}/>
+                  <Tabela />
               </View>
           </ScrollView>
           <Modalize
